@@ -7,7 +7,7 @@ POST http://localhost:3000/api/secretarias/consultorios
 Content-Type: application/json
 
 {
-    "nombre": "Musculitoo",
+    "nombre": "Musculito",
     "domicilio": "Sanchez de loria 77777"
 }
 
@@ -41,13 +41,13 @@ Content-Type: application/json
 }
 
 
-### POST CHARACTER TO DELETE
+### POST CONSULTORIO TO DELETE
 # @name createConsultorioToDelete
 POST http://localhost:3000/api/secretarias/consultorios
 Content-Type: application/json
 
 {
-    "nombre": "Kinesport",
+    "nombre": "El Origen",
     "domicilio": "Juan Jose Paso 1578"
 }
 

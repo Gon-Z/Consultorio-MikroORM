@@ -3,7 +3,7 @@ import express from 'express';
 import { secretariaRouter } from './secretaria/secretaria.routes.js';
 import { orm, syncSchema } from './shared/db/orm.js';
 import { RequestContext } from '@mikro-orm/core';
-import { consultorioRouter } from './secretaria/consultorio.routes.js';
+import { consultorioRouter } from './consultorio/consultorio.routes.js';
 
 
 const app = express()
