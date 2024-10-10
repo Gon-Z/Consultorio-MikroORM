@@ -8,6 +8,7 @@ import { especialidadRouter } from './especialidad/especialidad.routes.js';
 import { kinesiologoRouter } from './kinesiologo/kinesiologo.routes.js';
 import { turnoRouter } from './turnos/turno.routes.js';
 import { pacienteRouter } from './paciente/paciente.routes.js';
+import { tipoatencionRouter } from './tipoAtencion/ta.routes.js';
 
 
 const app = express()
@@ -26,6 +27,9 @@ app.use ('/api/kinesiologos', kinesiologoRouter)
 app.use('/api/especialidades', especialidadRouter)
 app.use ('/api/turnos', turnoRouter)
 app.use ('/api/pacientes', pacienteRouter)
+app.use ('/api/pacientes', pacienteRouter)
+app.use ('/api/tiposDeAtencion', tipoatencionRouter)
+
 
 
 app.use((_, res) => {

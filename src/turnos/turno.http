@@ -13,7 +13,8 @@ Content-Type: application/json
     "estado": "Activo",
     "importeTotal": 4500,
     "paciente": 1,
-    "kinesiologo": 1
+    "kinesiologo": 1,
+    "tipoAtencion": 2
 }
 
 ### POST turno 2
@@ -26,7 +27,8 @@ Content-Type: application/json
     "estado": "Activo",
     "importeTotal": 5500,
     "paciente": 2,
-    "kinesiologo": 2
+    "kinesiologo": 2,
+    "tipoAtencion": 1
 }
 
 
@@ -62,7 +64,8 @@ Content-Type: application/json
     "estado": "Inactivo",
     "importeTotal": 1500,
     "paciente": 2,
-    "kinesiologo": 1
+    "kinesiologo": 1,
+    "tipoAtencion": 1
 }
 
 

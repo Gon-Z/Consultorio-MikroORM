@@ -7,8 +7,8 @@ import {
   import { BaseEntity } from '../shared/db/baseEntity.entity.js'
   import { Kinesiologo } from '../kinesiologo/kinesiologo.entity.js'
   import { Paciente } from '../paciente/paciente.entity.js'
-  /*import { TipoAtencion } from '../tipoAtencion/ta.entity.js'
-  import { Disponibilidad } from '../disponibilidad/dispo.enitity.js'*/
+  import { TipoAtencion } from '../tipoAtencion/ta.entity.js'
+  /*import { Disponibilidad } from '../disponibilidad/dispo.enitity.js'*/
 
 @Entity()
 export class Turno extends BaseEntity {
@@ -30,10 +30,10 @@ export class Turno extends BaseEntity {
         @ManyToOne(() => Kinesiologo, {nullable: false})
         kinesiologo !: Rel<Kinesiologo>   
           
-        /*@ManyToOne(() => TipoAtencion, {nullable: false})
+        @ManyToOne(() => TipoAtencion, {nullable: false})
         tipoAtencion !: Rel <TipoAtencion>
 
-        @ManyToOne(() => Disponibilidad, {nullable: false})
+        /*@ManyToOne(() => Disponibilidad, {nullable: false})
         disponibilidad!: Rel<Disponibilidad>*/
     }
 
