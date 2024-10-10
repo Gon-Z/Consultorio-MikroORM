@@ -9,6 +9,7 @@ import { kinesiologoRouter } from './kinesiologo/kinesiologo.routes.js';
 import { turnoRouter } from './turnos/turno.routes.js';
 import { pacienteRouter } from './paciente/paciente.routes.js';
 import { tipoatencionRouter } from './tipoAtencion/ta.routes.js';
+import { precioRouter } from './precio/precio.routes.js';
 
 
 const app = express()
@@ -29,6 +30,7 @@ app.use ('/api/turnos', turnoRouter)
 app.use ('/api/pacientes', pacienteRouter)
 app.use ('/api/pacientes', pacienteRouter)
 app.use ('/api/tiposDeAtencion', tipoatencionRouter)
+app.use ('/api/precios', precioRouter)
 
 
 

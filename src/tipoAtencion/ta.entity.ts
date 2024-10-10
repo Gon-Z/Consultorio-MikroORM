@@ -1,8 +1,8 @@
 import { Entity, Property, Collection, Cascade,  OneToMany, Rel, ManyToOne } from "@mikro-orm/core";
 import { BaseEntity } from "../shared/db/baseEntity.entity.js";
 import { Turno } from "../turnos/turno.entity.js";
-/*import { Precio } from "../precio/precio.entity.js";
-import { Disponibilidad } from "../disponibilidad/dispo.enitity.js";*/
+import { Precio } from "../precio/precio.entity.js";
+/*import { Disponibilidad } from "../disponibilidad/dispo.enitity.js";*/
 
 @Entity()
 export class TipoAtencion extends BaseEntity{
@@ -15,10 +15,13 @@ export class TipoAtencion extends BaseEntity{
   })
   Turnos = new Collection<Turno>(this)
   
-  /*@ManyToOne(() => Precio, { nullable: false })
-  precio !: Rel<Precio>
+  @OneToMany(() => Precio, (precio) => precio.tipoAtencion, {
+    cascade: [Cascade.ALL],
+  })
 
-  @OneToMany(() => Disponibilidad, (dispo) => dispo.tipoAtencion, {
+  Precios = new Collection<Precio>(this)
+
+  /*@OneToMany(() => Disponibilidad, (dispo) => dispo.tipoAtencion, {
     cascade: [Cascade.ALL],
   })
   Disponibilidades = new Collection<Disponibilidad>(this)*/
