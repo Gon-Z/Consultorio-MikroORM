@@ -15,6 +15,7 @@ Content-Type: application/json
     "password": "aRospej241",
     "telefono": 341333444 ,
     "dni": 44291893,
+    "especialidad": 1,
     "consultorio": 1
 }
 
@@ -31,6 +32,7 @@ Content-Type: application/json
     "password": "veNatuEr423",
     "telefono": 341888999 ,
     "dni": 44291893,
+    "especialidad": 2,
     "consultorio": 2
 }
 
@@ -65,6 +67,7 @@ Content-Type: application/json
     "password": "sanPeDRO534",
     "telefono": 341777111 ,
     "dni": 43491793,
+    "especialidad": 2,
     "consultorio": 1
 }
 
