@@ -3,6 +3,7 @@ import { BaseEntity } from "../shared/db/baseEntity.entity.js";
 import { Especialidad } from "../especialidad/especialidad.entity.js";
 import { Consultorio } from '../consultorio/consultorio.entity.js';
 import { Turno } from "../turnos/turno.entity.js";
+import { Disponibilidad } from "../disponibilidad/dispo.enitity.js";
 
 
 @Entity()
@@ -27,4 +28,6 @@ export class Kinesiologo extends BaseEntity{
   consultorio !: Rel<Consultorio>
   @OneToMany(() => Turno, turno => turno.kinesiologo, {cascade: [Cascade.ALL]})
   turnos = new Collection<Turno>(this);
+  @OneToMany(() => Disponibilidad, disponibilidad => disponibilidad.kinesiologo, {cascade: [Cascade.ALL]})
+  disponibilidad = new Collection<Disponibilidad>(this);
 }
