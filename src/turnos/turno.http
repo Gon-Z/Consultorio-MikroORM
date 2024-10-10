@@ -12,6 +12,7 @@ Content-Type: application/json
     "hora": "18:30",
     "estado": "Activo",
     "importeTotal": 4500,
+    "paciente": 1,
     "kinesiologo": 1
 }
 
@@ -24,6 +25,7 @@ Content-Type: application/json
     "hora": "17:00",
     "estado": "Activo",
     "importeTotal": 5500,
+    "paciente": 2,
     "kinesiologo": 2
 }
 
@@ -59,6 +61,7 @@ Content-Type: application/json
     "hora": "16:00",
     "estado": "Inactivo",
     "importeTotal": 1500,
+    "paciente": 2,
     "kinesiologo": 1
 }
 
@@ -78,42 +81,3 @@ Content-Type: application/json
 
 ### DELETE a character
 DELETE http://localhost:3000/api/turnos/{{idToDelete}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### modificar un turno PUT
-PUT http://localhost:3000/api/turnos/6698453b55c972c8d0c4e49e
-Content-Type: application/json
-
-{
-    "fecha": "27-09-2024",
-    "hora": "17:00",
-    "estado": "Activo",
-    "importeTotal": 5500,
-    "kinesiologo": 2
-}
-
-### modificar un turno PATCH
-PATCH http://localhost:3000/api/turnos/6698453b55c972c8d0c4e49e
-Content-Type: application/json
-
-{
-    "estado": "Completo",
-}
-
-### borrar un tunro
-DELETE http://localhost:3000/api/turnos/6699b0bdd6a40b3980b1a048
