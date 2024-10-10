@@ -4,6 +4,8 @@ import { secretariaRouter } from './secretaria/secretaria.routes.js';
 import { orm, syncSchema } from './shared/db/orm.js';
 import { RequestContext } from '@mikro-orm/core';
 import { consultorioRouter } from './consultorio/consultorio.routes.js';
+/*import { especialidadRouter } from './especialidad/especialidad.routes.js';*/
+import { kinesiologoRouter } from './kinesiologo/kinesiologo.routes.js';
 
 
 const app = express()
@@ -18,6 +20,8 @@ app.use((req, res, next) => {
 
 app.use('/api/secretarias/consultorios', consultorioRouter)
 app.use('/api/secretarias', secretariaRouter)
+app.use ('/api/kinesiologos', kinesiologoRouter)
+/*app.use('/api/especialidades', especialidadRouter)*/
 
 
 app.use((_, res) => {
