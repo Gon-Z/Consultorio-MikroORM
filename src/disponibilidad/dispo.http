@@ -6,10 +6,12 @@ GET http://localhost:3000/api/disponibilidad
 POST http://localhost:3000/api/disponibilidad
 Content-Type: application/json
 
+// Franja horaria del kine no los horarios puntuales donde esta dispo
+
 {
-    "fecha": "2024-12-19",
-    "hora": "12:00",
-    "estado": "Ocupado",
+    "diaSemana": "Lunes",
+    "horaInicio": "12:00",
+    "horaFin": "18:00",
     "kinesiologo": 2
 }
 
@@ -19,9 +21,9 @@ POST http://localhost:3000/api/disponibilidad
 Content-Type: application/json
 
 {
-    "fecha": "2024-10-10",
-    "hora": "11:00",
-    "estado": "Libre",
+    "diaSemana": "Martes",
+    "horaInicio": "06:00",
+    "horaFin": "12:00",
     "kinesiologo": 1
 }
 
@@ -40,7 +42,7 @@ PUT http://localhost:3000/api/disponibilidad/{{id}}
 Content-Type: application/json
 
 {
-    "estado": "Libre"
+    "horaFin": "17:00"
 }
 
 
@@ -50,9 +52,9 @@ POST http://localhost:3000/api/disponibilidad
 Content-Type: application/json
 
 {
-    "fecha": "2024-11-17",
-    "hora": "16:00",
-    "estado": "Libre",
+    "diaSemana": "Viernes",
+    "horaInicio": "12:00",
+    "horaFin": "18:00",
     "kinesiologo": 2
 }
 

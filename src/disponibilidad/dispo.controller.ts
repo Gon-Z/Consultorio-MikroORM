@@ -7,9 +7,9 @@ const em = orm.em
 function sanitizedInput (req: Request, res: Response, next: NextFunction) {
 
     req.body.sanitizedInput = {
-        fecha: req.body.fecha,
-        hora: req.body.hora,
-        estado: req.body.estado,
+        diaSemana: req.body.diaSemana,
+        horaInicio: req.body.horaInicio,
+        horaFin: req.body.horaFin,
         kinesiologo: req.body.kinesiologo,
     }
     Object.keys(req.body.sanitizedInput).forEach((key)=>{

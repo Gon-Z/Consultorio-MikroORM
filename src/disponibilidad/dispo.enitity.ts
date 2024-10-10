@@ -14,13 +14,13 @@ import { Kinesiologo } from '../kinesiologo/kinesiologo.entity.js'
 @Entity ()
 export class Disponibilidad extends BaseEntity {
   @Property({nullable:false})
-  fecha !: Date
+  diaSemana !: string
 
   @Property({nullable:false})
-  hora !: string
+  horaInicio !: string
 
   @Property({nullable:false})
-  estado !: string
+  horaFin !: string
   
   @ManyToOne(() => Kinesiologo, {nullable:false})
   kinesiologo !: Rel <Kinesiologo>
