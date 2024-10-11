@@ -7,6 +7,7 @@ const em = orm.em
 function sanitizedInput (req: Request, res: Response, next: NextFunction) {
 
     req.body.sanitizedInput = {
+        fechaDesde: req.body.fechaDesde,
         diaSemana: req.body.diaSemana,
         horaInicio: req.body.horaInicio,
         horaFin: req.body.horaFin,

@@ -13,6 +13,9 @@ import { Kinesiologo } from '../kinesiologo/kinesiologo.entity.js'
 
 @Entity ()
 export class Disponibilidad extends BaseEntity {
+  @Property({nullable: false}) 
+  fechaDesde !: string
+
   @Property({nullable:false})
   diaSemana !: string
 
